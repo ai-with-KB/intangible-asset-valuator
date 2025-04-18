@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patent Impact Predictor</title>
+</head>
+<body style="font-family: Arial; margin: 50px;">
+    <h2>Patent Citation Impact Predictor</h2>
+    <form method="post" action="/predict">
+        <label>Title:</label><br>
+        <input type="text" name="title" style="width: 400px;"><br><br>
+        <label>Abstract:</label><br>
+        <textarea name="abstract" rows="6" cols="60"></textarea><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h3>Predicted Impact Category: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
